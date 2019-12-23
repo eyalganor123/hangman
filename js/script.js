@@ -45,6 +45,7 @@ function onLetterClicked(e) {
         };
     });
 console.log('guesses to hang:',gGuessesToHang);
+document.querySelector('.messege').innerHTML = `(guesses to hang: ${gGuessesToHang})`;
     render();
     if(gGuessesToHang <1) hangman()
     if (gNewMap.every(checkForWin)) win();
@@ -74,7 +75,7 @@ function reset(){
     gLetters.forEach(element => {
             element.selected = "";
     });
-    document.querySelector('.hangman').innerHTML = '';
+    document.querySelector('.messege').innerHTML = '';
     gGuessesToHang=8;
     document.getElementById('catagories').value = 'title'
 

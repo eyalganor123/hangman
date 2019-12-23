@@ -1,93 +1,113 @@
-body{
+body {
     user-select: none;
-    margin:0;
+    margin: 0;
     background-color: rgb(196, 196, 196);
 }
+
 .container {
-    margin:0 auto;
+    margin: 0 auto;
     max-width: 980px;
     background-color: rgb(163, 27, 84);
-    height:700px;
-}
-.noose{
-    position:fixed;
-    top:0;
-    z-index:1;
+    height: 700px;
 }
 
-.menu-letter{
-    cursor:pointer;
-    padding:10px;
-    background-color: #fff;
-    border:1px solid black
+.noose {
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
-.menu-letter:hover{
+
+.menu-letter {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid black
+}
+
+.menu-letter:hover {
     background-color: rgb(139, 139, 139);
 
 }
-nav,footer{
+
+nav,
+footer {
     background-color: #fff;
-    height:40px;
+    height: 40px;
 }
-.words-container{
-    /* margin-top:50px;     */
-}
-.letters-container{
-    margin-bottom: 20px;
-}
-.letter{
- 
+
+.words-container {
+    margin-top: 120px;
     text-align: center;
-    font-size:50px;
-    padding:10px;
+
+}
+
+.letters-container {
+    margin-bottom: 20px;
+    z-index: 5;
+}
+
+.letter {
+
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
     background-color: white;
-    width:50px;
-    height:50px;
-    margin:10px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
     margin-bottom: 100px;
 }
-.hidden{
+
+.hidden {
     background-color: transparent;
     color: transparent;
     border-bottom: 1px solid black;
 }
-.flex{
-    display:flex;
+
+.flex {
+    display: flex;
     justify-content: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
-.selected-letter{
+
+.selected-letter {
     background-color: orange;
 }
-.select{
-    font-size:30px;
+
+.select {
+    font-size: 30px;
 }
-.messege{
-    color:white;
-    font-size:40px;
+
+.messege {
+    color: white;
+    font-size: 40px;
 }
-.grid-item{
+
+.grid-item {
     color: blue;
-    padding:10px;
+    padding: 10px;
     border: 1px solid black;
     background-color: white;
 }
-.grid{
+
+.grid {
     display: grid;
-    grid-template-columns: repeat(8,20px);
-    grid-template-rows: repeat(8,20px);
-    grid-gap:2px;
+    grid-template-columns: repeat(8, 20px);
+    grid-template-rows: repeat(8, 20px);
+    grid-gap: 2px;
 }
-.modal{
-    position:fixed;
-    top:0;
-    left:0;
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: rgb(170, 167, 167);
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
 }
-select{
-    font-size:30px;
-    height:50px;
-    border:1px solid black;
+
+select {
+    font-size: 30px;
+    height: 50px;
+    border: 1px solid black;
 }
