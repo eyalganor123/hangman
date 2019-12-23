@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HangMan</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <img class="noose" src="./assets/rope.png" width="200" alt="">
+    <main class="container">
+        
+        <div class="words-container flex"></div>
+        <div class="letters-container flex"></div>
+        <div class="messege flex"></div>
+        <div class="img flex">
+        <img src="./assets/hangman.png" width="100" alt="">
+    </div>
+    </main>
+
+    <modal class="modal flex">
+        <select name="catagories" id="catagories" onchange="chooseCatagory()">
+            <option value="title">CHOOSE CATAGORY</option>
+            <option value="animals">animals</option>
+            <option value="objects">objects</option>
+            <option value="colors">colors</option>
+        </select>
+    </modal>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
