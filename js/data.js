@@ -98,7 +98,9 @@ function chooseCatagory(){
     return catagory
 }
 function closeModal(){
-    document.querySelector('.modal').style.display='none'
+    document.querySelector('.modal').style.display='none';
+    document.querySelector('.noose').innerHTML=`<img src="./assets/8.png" width="100" alt=""></img>
+    `;
 }
 
 function getWordToRender() {

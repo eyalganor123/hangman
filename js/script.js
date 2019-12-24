@@ -22,17 +22,10 @@ function render() {
 
 }
 
-function renderHang() {
-    var elHangman = document.querySelector('.hangman');
-    elHangman.innerHTML += `<div>$</div>`
-}
-
 function onLetterClicked(e) {
     var currLetter = e.target.innerHTML;
-    if(!gCurrentWordLettersArray.includes(currLetter)) 
-    {
+    if (!gCurrentWordLettersArray.includes(currLetter)) {
         gGuessesToHang--;
-        
     }
     gNewMap.forEach(item => {
         if (item.letter === currLetter) {
@@ -44,10 +37,10 @@ function onLetterClicked(e) {
             element.selected = "selected-letter"
         };
     });
-console.log('guesses to hang:',gGuessesToHang);
-document.querySelector('.messege').innerHTML = `(guesses to hang: ${gGuessesToHang})`;
+    console.log('guesses to hang:', gGuessesToHang);
+    document.querySelector('.noose').innerHTML = `<img class="noose" src="./assets/${gGuessesToHang}.png" width="100" alt="">`;
     render();
-    if(gGuessesToHang <1) hangman()
+    if (gGuessesToHang < 1) hangman()
     if (gNewMap.every(checkForWin)) win();
 }
 
@@ -58,25 +51,28 @@ function checkForWin(item) {
 function hangman() {
     console.log('gameover');
     document.querySelector('.messege').innerHTML = 'Game Over';
-    setTimeout(openModal,3000);
+    setTimeout(openModal, 3000);
 }
 
 function win() {
     document.querySelector('.messege').innerHTML = 'Winner';
     console.log('WINNER');
-    setTimeout(openModal,3000);
+    setTimeout(openModal, 3000);
 }
-function openModal(){
-    document.querySelector('.modal').style.display='flex';
+
+function openModal() {
+    document.querySelector('.modal').style.display = 'flex';
     reset()
 }
 
-function reset(){
+function reset() {
     gLetters.forEach(element => {
-            element.selected = "";
+        element.selected = "";
     });
     document.querySelector('.messege').innerHTML = '';
-    gGuessesToHang=8;
-    document.getElementById('catagories').value = 'title'
+    document.querySelector('.noose').innerHTML = `<div class="noose"><img src="./assets/1.png" width="100" alt=""></div>`;
+    gGuessesToHang = 8;
+    document.getElementById('catagories').value = 'title';
+
 
 }
