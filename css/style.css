@@ -125,4 +125,9 @@ select {
         margin: 10px;
         margin-bottom: 100px;
     }
+    .hidden {
+        background-color: transparent;
+        color: transparent;
+        border-bottom: 1px solid black;
+    }
 }
