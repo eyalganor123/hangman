@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
     max-width: 980px;
     background-color: rgb(163, 27, 84);
-    height: 700px;
+    height: 400px;
 }
 
 .noose {
@@ -27,7 +27,6 @@ body {
 
 .menu-letter:hover {
     background-color: rgb(139, 139, 139);
-
 }
 
 nav,
@@ -37,9 +36,7 @@ footer {
 }
 
 .words-container {
-    /* margin-top: 120px; */
     text-align: center;
-
 }
 
 .letters-container {
@@ -84,19 +81,7 @@ footer {
     font-size: 40px;
 }
 
-.grid-item {
-    color: blue;
-    padding: 10px;
-    border: 1px solid black;
-    background-color: white;
-}
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(8, 20px);
-    grid-template-rows: repeat(8, 20px);
-    grid-gap: 2px;
-}
 
 .modal {
     position: fixed;
@@ -108,7 +93,36 @@ footer {
 }
 
 select {
-    font-size: 30px;
+    font-size: 20px;
     height: 50px;
     border: 1px solid black;
+}
+@media (max-width: 600px){
+    select{
+        font-size: 20px;
+        height: 50px;
+        border: 1px solid black;
+    }
+    .noose {
+        position: fixed;
+        top: 350px;
+        left:150px;
+        z-index: 1;
+    }
+    .container {
+        margin: 0 auto;
+        max-width: 980px;
+        background-color: rgb(163, 27, 84);
+        height:600px;
+    }
+    .letter {
+        text-align: center;
+        font-size: 20px;
+        padding: 10px;
+        background-color: white;
+        width: 10px;
+        height: 20px;
+        margin: 10px;
+        margin-bottom: 100px;
+    }
 }
