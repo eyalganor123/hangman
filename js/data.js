@@ -104,13 +104,11 @@ function closeModal(){
 }
 
 function getWordToRender() {
-
     return gWords[getRandomInt(gWords.length)];
 }
 
 function splitWord(word) {
     gCurrentWordLettersArray = (word.split(''));
-    // var lettersObj = mapLetters();
     var newLetterMap = gCurrentWordLettersArray.map(function (val) {
         return {
             letter: val,
@@ -118,14 +116,4 @@ function splitWord(word) {
         };
     });
     return newLetterMap;
-}
-
-function mapLetters() {
-    gMapLetters = {};
-    for (var i = 0; i < gCurrentWordLettersArray.length; ++i) {
-        if (!gMapLetters[gCurrentWordLettersArray[i]])
-            gMapLetters[gCurrentWordLettersArray[i]] = 0;
-        ++gMapLetters[gCurrentWordLettersArray[i]];
-    };
-    return (gMapLetters)
 }

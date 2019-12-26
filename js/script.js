@@ -1,13 +1,11 @@
 'use strict'
 
 function init() {
-    var word = getWordToRender();
-    gNewMap = splitWord(word);
+    gNewMap = splitWord(getWordToRender());
     render();
 }
 
 function render() {
-
     var strDivs = ``;
     gNewMap.forEach(item => {
         strDivs += `<div class="letter ${item.isHidden}">${item.letter}</div>`
